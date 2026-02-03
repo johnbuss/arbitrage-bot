@@ -1,25 +1,23 @@
-# Configuration settings for the Arbitrage Bot
+# Configuration settings
 
-# Paths
-BASE_PATH = '/path/to/project'
-LOG_PATH = f'{BASE_PATH}/logs'
+# Project paths
+BASE_PATH = "path/to/project"
 
 # Playwright settings
-debug = False
-headless = True
+PLAYWRIGHT_SETTINGS = {
+    'headless': True,
+    'timeout': 30000
+}
 
 # Sites configuration
 SITES = {
-    'site1': {
-        'url': 'https://example1.com',
-        'api_key': 'YOUR_API_KEY_1'
-    },
-    'site2': {
-        'url': 'https://example2.com',
-        'api_key': 'YOUR_API_KEY_2'
-    }
+    'flashscore': 'https://flashscore.com',
+    'bet365': 'https://bet365.com',
+    'betano': 'https://betano.com'
 }
 
-# Logging settings
-LOG_LEVEL = 'INFO'
-LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+# Logging configuration
+LOGGING = {
+    'level': 'INFO',
+    'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+}
